@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --brand-primary: #0D6EFD;
+  --brand-orange: #FF9017;
+  --brand-green: #00B517;
+  --bg-gray: #F7FAFC;
+  --text-dark: #1C1C1C;
+  --text-gray: #8B96A5;
+  --border-color: #E0E7FF;
+}
+
+@theme {
+  --color-primary: var(--brand-primary);
+  --color-orange: var(--brand-orange);
+  --color-green: var(--brand-green);
+  --color-bg-gray: var(--bg-gray);
+  --color-text-dark: var(--text-dark);
+  --color-text-gray: var(--text-gray);
+  --color-border-custom: var(--border-color);
+}
+
+body {
+  background-color: #F7FAFC;
+  font-family: 'Inter', sans-serif;
+  color: #1C1C1C;
+  -webkit-font-smoothing: antialiased;
+}
+
+.card {
+  background: white;
+  border: 1px solid #E3E8EE;
+  border-radius: 6px;
+}
+
+.btn-primary {
+  background: #0D6EFD;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background: #0b5ed7;
+}
+
+.btn-outline {
+  border: 1px solid #E3E8EE;
+  background: white;
+  color: #0D6EFD;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover {
+  background: #f8f9fa;
+}
+
+/* Custom categories sidebar styling */
+.category-item {
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.category-item:hover, .category-item.active {
+  background: #E5F1FF;
+  color: #1C1C1C;
+  font-weight: 500;
+}
