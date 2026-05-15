@@ -9,15 +9,8 @@ if (process.env.NODE_ENV !== 'production') {
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Database Middleware
-app.use(async (req, res, next) => {
-  try {
-    await connectDB();
-    next();
-  } catch (err) {
-    res.status(500).json({ message: 'Database connection failed' });
-  }
-});
+// Non-blocking Database Connection
+connectDB().catch(err => console.error('Initial DB connection failed:', err));
 
 // Middleware
 app.use(cors({
