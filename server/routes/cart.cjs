@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/User');
-const { protect } = require('../middleware/auth');
+const User = require('../models/User.cjs');
+const { protect } = require('../middleware/auth.cjs');
 
 // @route   GET /api/cart
 // @desc    Get user's cart
