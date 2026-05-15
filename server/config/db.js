@@ -1,16 +1,31 @@
 const mongoose = require('mongoose');
-require('dotenv').config({ path: __dirname + '/../.env' });
+
+let cachedConnection = null;
 
 const connectDB = async () => {
-  if (!process.env.MONGODB_URI) {
-    console.error('❌ MONGODB_URI is not defined in environment variables!');
-    return;
+  if (cachedConnection) {
+    return cachedConnection;
   }
+
+  if (!process.env.MONGODB_URI) {
+    console.error('❌ MONGODB_URI is not defined!');
+    return null;
+  }
+
   try {
-    const conn = await mongoose.connect(process.env.MONGODB_URI);
-    console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
+    const opts = {
+      bufferCommands: false,
+      maxPoolSize: 10,
+      serverSelectionTimeoutMS: 5000,
+    };
+
+    cachedConnection = await mongoose.connect(process.env.MONGODB_URI, opts);
+    console.log('✅ MongoDB Connected and Cached');
+    return cachedConnection;
   } catch (error) {
     console.error(`❌ MongoDB Error: ${error.message}`);
+    cachedConnection = null;
+    return null;
   }
 };
 
