@@ -2,7 +2,7 @@
 
 ![BrandStore Cover](public/assets/interior/1.jpg) <!-- Assuming this exists, acts as a nice header -->
 
-**Live Demo:** 👉 [Click Here to View Live Site](https://ecommerce-fullstack-design-pi-mauve.vercel.app/)  
+**Live Demo:** 👉 [Click Here to View Live Site] https://ecommerce-fullstack-design-pi-mauve.vercel.app/  
 **GitHub Repository:** 👉 [Click Here to View Source Code](https://github.com/Affanmir00-beep/ecommerce-fullstack-design)
 
 ---
