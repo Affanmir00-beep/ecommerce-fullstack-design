@@ -1,5 +1,8 @@
 # BrandStore - Premium E-Commerce Platform
 
+**Submitted by:** Affan Ahmad Mir  
+**Roll Number:** DHC-3001  
+
 ![BrandStore Cover](public/assets/interior/1.jpg) <!-- Assuming this exists, acts as a nice header -->
 
 **Live Demo:** 👉 [Click Here to View Live Site] https://ecommerce-fullstack-design-pi-mauve.vercel.app/  
